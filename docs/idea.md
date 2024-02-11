@@ -1,12 +1,12 @@
-Idea #1: Trainingroup
-Trainingroup es una app de ejercicio, donde se pueden elegir diferentes caminos, es decir, los ejercicios seran personalizados dependiendo si la persona tiene algun enfoque en el deporte, baile o algún arte marcial.
+<h1><b>Idea #1: Trainingroup</b></h1>
+<p>Trainingroup es una app de ejercicio, donde se pueden elegir diferentes caminos, es decir, los ejercicios seran personalizados dependiendo si la persona tiene algun enfoque en el deporte, baile o algún arte marcial.</p>
 
-Aplicaciones parecidas
+<ul><b>Aplicaciones parecidas</b>
+<li>Fitbit</li>
+<li>Estrava</li>
+<li>Fiton</li>
+</ul>
 
-Fitbit
-Estrava
-Fiton
+<h1><b>Idea #2:</b></h1>
 
-Idea #2:
-
-Idea #3:
+<h1><b>Idea #3:</b></h1>
