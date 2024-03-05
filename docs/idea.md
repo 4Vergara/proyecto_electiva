@@ -11,7 +11,7 @@
 <li><a href="https://marvelapp.com/prototype/jd00500/screen/91402120">Trainingroup</a></li>
 </ul>
 <h1><b>Idea #2: InvEasy</b></h1>
-<p>InvEasy es una app que te permite tener un reporte actual de todas las cosas que tienes en tu bodega asi como su estado, lugar de almacenamiento, fecha de vencimiento, cantidades, proveedor, etc. Permite tener una clasificacion para cada producto y alertas en caso de que se esten agotando o su fecha de vencimiento este proxima.</p>
+<p>InvEasy es una app que te permite tener un reporte actual de todas las cosas que tienes en tu bodega, así como su estado, lugar de almacenamiento, fecha de vencimiento, cantidades, proveedor, etc. Permite tener una clasificación para cada producto y alertas en caso de que se estén agotando o su fecha de vencimiento esté próxima.</p>
 <ul>
 <h2><b>Aplicaciones parecidas</b></h2>
 <li><a href="https://play.google.com/store/apps/details?id=app.kleysonklaus.inventario_facil&hl=es&gl=US" target="_blank">Inventario facil</a></li>
