@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TraininGroup</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="email_hint">ejemplo@ejemplo.com</string>
+    <string name="logo_user">Logo de persona</string>
+    <string name="email">Correo electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="title_activity_navegacion">navegacion</string>
+    <string name="title_home">Deportes</string>
+    <string name="title_dashboard">Bailes</string>
+    <string name="title_notifications">Artes Marciales</string>
+    <string name="buttonSing">Entrar</string>
+</resources>
