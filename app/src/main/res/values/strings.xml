@@ -10,4 +10,7 @@
     <string name="title_dashboard">Bailes</string>
     <string name="title_notifications">Artes Marciales</string>
     <string name="buttonSing">Entrar</string>
+    <string name="deportes">Deportes</string>
+    <string name="bailes">Bailes</string>
+    <string name="artes_marciales">Artes Marciales</string>
 </resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "134288921340",
+    "project_id": "proyectoelectiva-7386d",
+    "storage_bucket": "proyectoelectiva-7386d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134288921340:android:16ad21b92ba35e46e87d79",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_electiva"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAicZgB6laYcG6MkLaOwsdPY91_ASmS1uE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
