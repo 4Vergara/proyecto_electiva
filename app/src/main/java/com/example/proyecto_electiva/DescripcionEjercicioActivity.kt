@@ -1,10 +1,12 @@
 package com.example.proyecto_electiva
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.example.proyecto_electiva.databinding.ActivityDescripcionEjercicioBinding
 
 class DescripcionEjercicioActivity : AppCompatActivity() {
@@ -22,15 +24,20 @@ class DescripcionEjercicioActivity : AppCompatActivity() {
         }
 
         val nombre = intent.getStringExtra("nombre")
+        val imagen = intent.getStringExtra("imagen")
         val descripcion = intent.getStringExtra("descripcion")
         val practica = intent.getStringExtra("practica")
         val urlVideo = intent.getStringExtra("urlVideo")
+
+        Log.d("Imagen", imagen.toString())
 
         binding.tituloEjercicio.text = nombre
         binding.descripcionEjercicio.text = descripcion
         binding.practicaEjercicio.text = practica
         binding.urlVideo.text = urlVideo
 
-
+        Glide.with(this)
+            .load(imagen)
+            .into(binding.imageViewProducto)
     }
 }

@@ -36,6 +36,7 @@ class AdaptadorEjercicio(private val datos: ArrayList<elementoEjercicio>, privat
 
             intent.putExtra("nombre", item.nombre)
             intent.putExtra("descripcion", item.descripcion)
+            intent.putExtra("imagen", item.imagen)
             intent.putExtra("practica", item.practica)
             intent.putExtra("urlVideo", item.urlVideo)
 
