@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 
 class Adaptador(private val dataSet: ArrayList<elemento>, private val context: Context) :
@@ -37,12 +38,22 @@ class Adaptador(private val dataSet: ArrayList<elemento>, private val context: C
         holder.titulo.text = elemento.nombre
         holder.descripcion.text = elemento.descripcion
 
+        if (!elemento.imagen.isNullOrEmpty()) {
+            // Cargar la imagen utilizando Glide
+            Glide.with(context)
+                .load(elemento.imagen)
+                .into(holder.imagen)
+        }else{
+            holder.imagen.setImageResource(R.drawable.deportes_default)
+        }
+
         holder.itemView.setOnClickListener {
             // Crear Intent para iniciar EjercicioActivity
             val intent = Intent(context, EjercicioActivity::class.java)
 
             intent.putExtra("nombre", elemento.nombre)
             intent.putExtra("descripcion", elemento.descripcion)
+            intent.putExtra("imagen", elemento.imagen)
             intent.putExtra("id", elemento.id)
 
             // Iniciar la actividad

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.proyecto_electiva.DescripcionEjercicioActivity
 import com.example.proyecto_electiva.EjercicioActivity
 import com.example.proyecto_electiva.R
@@ -29,6 +30,14 @@ class AdaptadorEjercicio(private val datos: ArrayList<elementoEjercicio>, privat
         val item = datos[position]
         holder.titulo.text = item.nombre
         holder.descripcion.text = item.descripcion
+
+        if(!item.imagen.isNullOrEmpty()){
+            Glide.with(context)
+                .load(item.imagen)
+                .into(holder.imagen)
+        }else{
+            holder.imagen.setImageResource(R.drawable.ejercicios_default)
+        }
 
         holder.itemView.setOnClickListener {
             // Crear Intent para iniciar EjercicioActivity

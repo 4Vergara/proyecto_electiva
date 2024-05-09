@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.example.proyecto_electiva.databinding.ActivityEjercicioBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -35,6 +36,8 @@ class EjercicioActivity : AppCompatActivity() {
         val nombreTarjeta = intent.getStringExtra("nombre")
         val descripcionTarjeta = intent.getStringExtra("descripcion")
         val id = intent.getStringExtra("id")
+        val imagen = intent.getStringExtra("imagen")
+
 
         Log.d("id", id.toString())
 
@@ -48,6 +51,14 @@ class EjercicioActivity : AppCompatActivity() {
         if (coleccion != null) {
             binding.tituloLista.text = nombreTarjeta
             binding.descripcionLista.text = descripcionTarjeta
+
+            if (!imagen.isNullOrEmpty()) {
+                Glide.with(this)
+                    .load(imagen)
+                    .into(binding.imagen)
+            }else{
+                binding.imagen.setImageResource(R.drawable.deportes_default)
+            }
 
             val datos = arrayListOf<elementoEjercicio>()
 

@@ -36,8 +36,12 @@ class DescripcionEjercicioActivity : AppCompatActivity() {
         binding.practicaEjercicio.text = practica
         binding.urlVideo.text = urlVideo
 
-        Glide.with(this)
-            .load(imagen)
-            .into(binding.imageViewProducto)
+        if(!imagen.isNullOrEmpty()){
+            Glide.with(this)
+                .load(imagen)
+                .into(binding.imageViewProducto)
+        }else{
+            binding.imageViewProducto.setImageResource(R.drawable.ejercicios_default)
+        }
     }
 }
