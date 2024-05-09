@@ -13,7 +13,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 data class elemento(
     val nombre: String,
     val descripcion: String,
-    val imagen: String
+    val imagen: String,
+    val id: String
 )
 
 class MenuActivity : AppCompatActivity() {
@@ -56,7 +57,8 @@ class MenuActivity : AppCompatActivity() {
                 val nombre = document.data["nombre"].toString()
                 val descripcion = document.data["descripcion"].toString()
                 val imagen = document.data["imagen"].toString()
-                datos.add(elemento(nombre, descripcion, imagen))
+                val id = document.data["id"].toString()
+                datos.add(elemento(nombre, descripcion, imagen, id))
             }
             val adaptador = Adaptador(datos, this)
 
@@ -71,7 +73,8 @@ class MenuActivity : AppCompatActivity() {
                 val nombre = document.data["nombre"].toString()
                 val descripcion = document.data["descripcion"].toString()
                 val imagen = document.data["imagen"].toString()
-                datos.add(elemento(nombre, descripcion, imagen))
+                val id = document.data["id"].toString()
+                datos.add(elemento(nombre, descripcion, imagen, id))
             }
             val adaptador = Adaptador(datos, this)
 
@@ -86,7 +89,8 @@ class MenuActivity : AppCompatActivity() {
                 val nombre = document.data["nombre"].toString()
                 val descripcion = document.data["descripcion"].toString()
                 val imagen = document.data["imagen"].toString()
-                datos.add(elemento(nombre, descripcion, imagen))
+                val id = document.data["id"].toString()
+                datos.add(elemento(nombre, descripcion, imagen, id))
             }
             val adaptador = Adaptador(datos, this)
 

@@ -43,6 +43,7 @@ class Adaptador(private val dataSet: ArrayList<elemento>, private val context: C
 
             intent.putExtra("nombre", elemento.nombre)
             intent.putExtra("descripcion", elemento.descripcion)
+            intent.putExtra("id", elemento.id)
 
             // Iniciar la actividad
             context.startActivity(intent)
