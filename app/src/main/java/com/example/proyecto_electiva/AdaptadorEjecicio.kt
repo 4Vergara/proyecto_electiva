@@ -1,11 +1,14 @@
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_electiva.DescripcionEjercicioActivity
+import com.example.proyecto_electiva.EjercicioActivity
 import com.example.proyecto_electiva.R
 import com.example.proyecto_electiva.elementoEjercicio
 
@@ -26,6 +29,20 @@ class AdaptadorEjercicio(private val datos: ArrayList<elementoEjercicio>, privat
         val item = datos[position]
         holder.titulo.text = item.nombre
         holder.descripcion.text = item.descripcion
+
+        holder.itemView.setOnClickListener {
+            // Crear Intent para iniciar EjercicioActivity
+            val intent = Intent(context, DescripcionEjercicioActivity::class.java)
+
+            intent.putExtra("nombre", item.nombre)
+            intent.putExtra("descripcion", item.descripcion)
+            intent.putExtra("practica", item.practica)
+            intent.putExtra("urlVideo", item.urlVideo)
+
+
+            // Iniciar la actividad
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
