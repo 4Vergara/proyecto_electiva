@@ -45,6 +45,8 @@ class MenuActivity : AppCompatActivity() {
             }
         })
 
+
+
     }
 
     private fun traerDeportes(binding: ActivityMenuBinding){
@@ -56,7 +58,7 @@ class MenuActivity : AppCompatActivity() {
                 val imagen = document.data["imagen"].toString()
                 datos.add(elemento(nombre, descripcion, imagen))
             }
-            val adaptador = Adaptador(datos)
+            val adaptador = Adaptador(datos, this)
 
             binding.vistaLista.adapter = adaptador
         }
@@ -71,7 +73,7 @@ class MenuActivity : AppCompatActivity() {
                 val imagen = document.data["imagen"].toString()
                 datos.add(elemento(nombre, descripcion, imagen))
             }
-            val adaptador = Adaptador(datos)
+            val adaptador = Adaptador(datos, this)
 
             binding.vistaLista.adapter = adaptador
         }
@@ -86,7 +88,7 @@ class MenuActivity : AppCompatActivity() {
                 val imagen = document.data["imagen"].toString()
                 datos.add(elemento(nombre, descripcion, imagen))
             }
-            val adaptador = Adaptador(datos)
+            val adaptador = Adaptador(datos, this)
 
             binding.vistaLista.adapter = adaptador
         }
