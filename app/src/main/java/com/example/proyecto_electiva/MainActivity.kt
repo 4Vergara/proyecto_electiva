@@ -12,7 +12,6 @@ import com.example.proyecto_electiva.databinding.ActivityMenuBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
         var binding = ActivityMainBinding.inflate(layoutInflater, null, false)
         setContentView(binding.root)
