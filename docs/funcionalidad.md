@@ -10,8 +10,8 @@
 <ol>
     <li>Visualización de una lista de deportes, danzas y artes marciales: Al acceder a la aplicación, se presentará al usuario una lista que incluye una variedad de deportes. En la parte superior de la interfaz, se brindará la opción de modificar esta visualización para mostrar, en su lugar, listas de danzas o artes marciales.</li>
     <li>Selección de un deporte, danza o arte marcial: Al seleccionar una de las opciones disponibles, se desplegará una serie de ejercicios específicos relacionados con la actividad elegida.</li>
-    <li>Selección de un ejercicio: Una vez seleccionado un ejercicio, se proporcionará una descripción breve sobre el mismo y las instrucciones para su correcta ejecución, acompañado de un botón que permitirá iniciar la rutina correspondiente.</li>
-    <li>Inicio de la rutina: Al iniciar la rutina, se mostrará un video ilustrativo del ejercicio seleccionado.</li>
+    <li>Selección de un ejercicio: Una vez seleccionado un ejercicio, se proporcionará una descripción breve sobre el mismo y las instrucciones para su correcta ejecución, acompañado de un reproductor de youtube.</li>
+    <li>Iniciar el video: Se mostrará un video ilustrativo del ejercicio seleccionado.</li>
     <li>Perfil del usuario: Se exhibirá el ejercicio que el usuario ha realizado con mayor frecuencia.</li>
     <li>Estadísticas: Este modulo permitira al usuario visualizar el total de horas dedicadas al ejercicio, así como detallar en qué ejercicio ha invertido toda esa cantidad de tiempo.</li>
 </ol>
