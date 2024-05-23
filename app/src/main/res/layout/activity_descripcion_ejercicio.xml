@@ -7,152 +7,139 @@
     android:layout_height="match_parent"
     tools:context=".DescripcionEjercicioActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Primer Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardDescripcion"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#E0E0E0"
-            app:cardElevation="4dp"
-            app:cardMaxElevation="6dp"
-            app:cardUseCompatPadding="true"
-            android:layout_margin="10dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:orientation="vertical"
+            android:padding="10dp">
 
-
-            <!-- Contenido de la tarjeta -->
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <!-- Primer Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#E0E0E0"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="10dp">
 
-
-                <!-- Título de la descripción -->
-                <TextView
-                    android:id="@+id/tituloEjercicio"
-                    android:layout_width="wrap_content"
+                <!-- Contenido de la tarjeta -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del producto"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="16dp"/>
+                    android:padding="10dp">
 
-                <!-- Contenido de la descripción -->
-                <TextView
-                    android:id="@+id/descripcionEjercicio"
-                    android:layout_width="wrap_content"
+                    <!-- Título de la descripción -->
+                    <TextView
+                        android:id="@+id/tituloEjercicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción del producto"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="16dp" />
+
+                    <!-- Contenido de la descripción -->
+                    <TextView
+                        android:id="@+id/descripcionEjercicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción del producto..."
+                        app:layout_constraintTop_toBottomOf="@id/tituloEjercicio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="16dp" />
+
+                    <!-- Imagen del producto -->
+                    <ImageView
+                        android:id="@+id/imageViewProducto"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/usuario"
+                        app:layout_constraintTop_toBottomOf="@id/descripcionEjercicio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="16dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de la Práctica -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPractica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#E0E0E0"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="10dp">
+
+                <!-- Contenido de la tarjeta -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del producto..."
-                    app:layout_constraintTop_toBottomOf="@id/tituloEjercicio"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="16dp"/>
+                    android:padding="10dp">
 
-                <!-- Imagen del producto -->
-                <ImageView
-                    android:id="@+id/imageViewProducto"
-                    android:layout_width="200dp"
+                    <!-- Título de la práctica -->
+                    <TextView
+                        android:id="@+id/textViewTituloPractica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cómo realizar el ejercicio"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="16dp" />
+
+                    <!-- Contenido de la práctica -->
+                    <TextView
+                        android:id="@+id/practicaEjercicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detalles prácticos..."
+                        app:layout_constraintTop_toBottomOf="@id/textViewTituloPractica"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="16dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card del Video -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#E0E0E0"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="10dp">
+
+                <WebView
+                    android:id="@+id/urlVideo"
+                    android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/usuario"
-                    app:layout_constraintTop_toBottomOf="@id/descripcionEjercicio"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="16dp"/>
+                    android:padding="16dp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
 
-        <!-- Card de la Práctica -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardPractica"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#E0E0E0"
-            app:cardElevation="4dp"
-            app:cardMaxElevation="6dp"
-            app:cardUseCompatPadding="true"
-            android:layout_margin="10dp"
-            app:layout_constraintTop_toBottomOf="@id/cardDescripcion"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+        </LinearLayout>
 
-            <!-- Contenido de la tarjeta -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
-
-                <!-- Título de la práctica -->
-                <TextView
-                    android:id="@+id/textViewTituloPractica"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cómo realizar el ejercicio"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="16dp"/>
-
-                <!-- Contenido de la práctica -->
-                <TextView
-                    android:id="@+id/practicaEjercicio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Detalles prácticos..."
-                    app:layout_constraintTop_toBottomOf="@id/textViewTituloPractica"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="16dp"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Card del Video -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardVideo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#E0E0E0"
-            app:cardElevation="4dp"
-            app:cardMaxElevation="6dp"
-            app:cardUseCompatPadding="true"
-            android:layout_margin="10dp"
-            app:layout_constraintTop_toBottomOf="@id/cardPractica"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <TextView
-                android:id="@+id/urlVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="www.ejemplo.com"
-                app:layout_constraintTop_toBottomOf="@id/cardDescripcion"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:padding="16dp"/>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Texto del URL -->
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
