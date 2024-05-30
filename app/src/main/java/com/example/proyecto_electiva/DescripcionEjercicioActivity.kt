@@ -31,6 +31,9 @@ class DescripcionEjercicioActivity : AppCompatActivity() {
         val descripcion = intent.getStringExtra("descripcion")
         val practica = intent.getStringExtra("practica")
         val urlVideo = intent.getStringExtra("urlVideo")
+        val idEjercicio = intent.getStringExtra("idEjercicio")
+
+        Log.d("Ejercicio", "Nombre: $nombre, Imagen: $imagen, Descripcion: $descripcion, Practica: $practica, urlVideo: $urlVideo, idEjercicio: $idEjercicio")
 
         //Cargar el video de youtube por un webView
 

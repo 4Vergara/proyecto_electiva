@@ -45,31 +45,118 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- TextView for the name -->
+            <!-- TextView for the favorite routes -->
             <TextView
-                android:id="@+id/nameTextView"
+                android:id="@+id/routesTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Carlos Vergara"
+                android:text="Rutas favoritas:"
                 android:textSize="18sp"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- TextView for the favorite sport -->
-            <TextView
-                android:id="@+id/sportTextView"
-                android:layout_width="wrap_content"
+            <!-- TextViews for favorite sports, dances, and martial arts -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Deporte Favorito"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/sportTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deportes: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/sportNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del deporte"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/danceTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bailes: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/danceNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del baile"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/martialArtsTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Artes Marciales: "
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/martialArtsNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del arte marcial"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card for the favorite exercise -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <!-- TextView for the favorite exercise -->
             <TextView
-                android:id="@+id/exerciseTextView"
+                android:id="@+id/exerciseTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ejercicio Favorito"
+                android:text="Ejercicio favorito: "
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/exerciseNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del ejercicio"
                 android:textSize="16sp"/>
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
