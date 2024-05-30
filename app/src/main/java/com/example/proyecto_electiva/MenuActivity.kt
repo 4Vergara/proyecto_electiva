@@ -63,7 +63,8 @@ class MenuActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_profile -> {
-                // Handle profile action
+                val  intent = android.content.Intent(this, perfil::class.java)
+                startActivity(intent)
                 true
             }
             R.id.action_statistics -> {
