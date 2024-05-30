@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".perfil">
+    tools:context=".perfil"
+    android:background="@drawable/background_menu">
 
     <!-- Card for the image -->
     <com.google.android.material.card.MaterialCardView
@@ -154,7 +155,7 @@
                 android:id="@+id/exerciseNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre del ejercicio"
+                android:text="Sin registros"
                 android:textSize="16sp"/>
 
         </LinearLayout>
