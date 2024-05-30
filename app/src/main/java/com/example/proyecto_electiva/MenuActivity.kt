@@ -2,6 +2,9 @@ package com.example.proyecto_electiva
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,6 +27,8 @@ class MenuActivity : AppCompatActivity() {
 
         var binding = ActivityMenuBinding.inflate(layoutInflater, null, false)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
 
         traerDeportes(binding)
 
@@ -48,6 +53,30 @@ class MenuActivity : AppCompatActivity() {
 
 
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.navigation_drawer, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_profile -> {
+                val  intent = android.content.Intent(this, perfil::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.action_statistics -> {
+                // Handle statistics action
+                true
+            }
+            R.id.action_logout -> {
+                // Handle logout action
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun traerDeportes(binding: ActivityMenuBinding){

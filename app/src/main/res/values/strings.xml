@@ -13,4 +13,9 @@
     <string name="deportes">Deportes</string>
     <string name="bailes">Bailes</string>
     <string name="artes_marciales">Artes Marciales</string>
+    <string name="menu_title">Menú</string>
+    <string name="perfil">Perfil</string>
+    <string name="estadisticas">Estadisticas</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="profile_photo">Foto de perfil</string>
 </resources>

@@ -10,16 +10,20 @@ import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.proyecto_electiva.databinding.ActivityEjercicioBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import androidx.activity.viewModels
+import com.example.proyecto_electiva.ui.EstadisticasViewModel
 
 data class elementoEjercicio(
     val nombre: String,
     val imagen: String,
     val descripcion: String,
     val practica: String,
-    val urlVideo: String
+    val urlVideo: String,
+    val idEjercicio: String
 )
 class EjercicioActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
+    private val viewModel: EstadisticasViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,7 +43,9 @@ class EjercicioActivity : AppCompatActivity() {
         val imagen = intent.getStringExtra("imagen")
 
 
-        Log.d("id", id.toString())
+        if (id != null) {
+            viewModel.actualizarEntradas(id, nombreTarjeta ?: "")
+        }
 
         val coleccion = when {
             id?.contains("deporte") == true -> "deportes"
@@ -68,13 +74,13 @@ class EjercicioActivity : AppCompatActivity() {
                 .addOnSuccessListener { result ->
                     for (document in result) {
                         val ejerciciosMap = document.data["ejercicios"] as Map<String, Any>
-                        ejerciciosMap.forEach { (nombre, ejercicioData) ->
+                        ejerciciosMap.forEach { (idEjercicio, ejercicioData) ->
                             val nombreEjercicio = (ejercicioData as Map<String, Any>)["nombre"].toString()
                             val imagenEjercicio = (ejercicioData as Map<String, Any>)["imagen"].toString()
                             val descripcionEjercicio = (ejercicioData as Map<String, Any>)["descripcion"].toString()
                             val practicaEjercicio = (ejercicioData as Map<String, Any>)["practica"].toString()
                             val urlVideoEjercicio = (ejercicioData as Map<String, Any>)["url_video"].toString()
-                            datos.add(elementoEjercicio(nombreEjercicio, imagenEjercicio, descripcionEjercicio, practicaEjercicio, urlVideoEjercicio))
+                            datos.add(elementoEjercicio(nombreEjercicio, imagenEjercicio, descripcionEjercicio, practicaEjercicio, urlVideoEjercicio, idEjercicio))
                         }
                     }
 
